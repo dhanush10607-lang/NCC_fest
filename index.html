@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARAKRAM 2026 | NCC Fest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --army-dark: #2d3319;
+            --army-olive: #4B5320;
+            --army-light: #8b965d;
+            --gold: #d4af37;
+        }
+
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1590158575026-681944649733?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .army-btn {
+            background-color: var(--army-olive);
+            transition: all 0.3s ease;
+        }
+
+        .army-btn:hover {
+            background-color: var(--army-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .input-focus:focus {
+            border-color: var(--army-olive);
+            box-shadow: 0 0 0 2px rgba(75, 83, 32, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <nav class="bg-[#2d3319] text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-white p-1 rounded-full w-10 h-10 flex items-center justify-center">
+                    <i class="fas fa-shield-halved text-army-olive text-2xl"></i>
+                </div>
+                <span class="font-bold text-xl tracking-tighter">PARAKRAM '26</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#" class="hover:text-yellow-500 transition">Home</a>
+                <a href="#events" class="hover:text-yellow-500 transition">Events</a>
+                <a href="#register" class="hover:text-yellow-500 transition">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient h-[60vh] flex flex-col items-center justify-center text-center text-white px-4">
+        <h2 class="text-xl md:text-2xl font-light tracking-[0.3em] mb-2">NCC UNIT [YOUR COLLEGE] PRESENTS</h2>
+        <h1 class="text-6xl md:text-8xl font-bold uppercase mb-4 text-white drop-shadow-2xl">PARAKRAM</h1>
+        <div class="w-24 h-1 bg-yellow-500 mb-6"></div>
+        <p class="text-lg md:text-xl max-w-2xl font-light italic">"Where Valour Meets Discipline"</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto -mt-16 px-4 pb-20">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div class="bg-white p-8 rounded shadow-xl text-center border-t-4 border-yellow-600">
+                <i class="fas fa-calendar-alt text-3xl text-army-olive mb-4"></i>
+                <h3 class="text-xl font-bold uppercase">Date</h3>
+                <p class="text-gray-600">March 15-16, 2026</p>
+            </div>
+            <div class="bg-white p-8 rounded shadow-xl text-center border-t-4 border-yellow-600">
+                <i class="fas fa-map-marker-alt text-3xl text-army-olive mb-4"></i>
+                <h3 class="text-xl font-bold uppercase">Location</h3>
+                <p class="text-gray-600">College Main Ground</p>
+            </div>
+            <div class="bg-white p-8 rounded shadow-xl text-center border-t-4 border-yellow-600">
+                <i class="fas fa-user-check text-3xl text-army-olive mb-4"></i>
+                <h3 class="text-xl font-bold uppercase">Eligibility</h3>
+                <p class="text-gray-600">SD/SW Cadets Only</p>
+            </div>
+        </div>
+
+        <section id="register" class="bg-white rounded-lg shadow-2xl overflow-hidden border border-gray-100">
+            <div class="bg-[#2d3319] py-6 px-8 flex justify-between items-center text-white">
+                <div>
+                    <h2 class="text-2xl font-bold uppercase tracking-wider">Cadet Enrolment</h2>
+                    <p class="text-xs text-gray-400">Please fill all details as per NCC records</p>
+                </div>
+                <i class="fas fa-file-signature text-3xl opacity-50"></i>
+            </div>
+            
+            <form id="registrationForm" class="p-8 md:p-12 space-y-8">
+                <div class="space-y-6">
+                    <h3 class="text-army-olive font-bold border-b pb-2 uppercase text-sm tracking-widest">Personal & Regimental Details</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-gray-500 uppercase">Full Name</label>
+                            <input type="text" name="name" required placeholder="JAI HIND" 
+                                class="w-full p-4 bg-gray-50 border border-gray-200 rounded outline-none input-focus transition">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-gray-500 uppercase">Regimental Number</label>
+                            <input type="text" name="regimentalNumber" required placeholder="e.g. TN24SDA12345" 
+                                class="w-full p-4 bg-gray-50 border border-gray-200 rounded outline-none input-focus transition">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-gray-500 uppercase">Rank</label>
+                            <select name="rank" class="w-full p-4 bg-gray-50 border border-gray-200 rounded outline-none input-focus transition">
+                                <option>Cadet (CDT)</option>
+                                <option>Corporal (CPL)</option>
+                                <option>Sergeant (SGT)</option>
+                                <option>UO / SUO</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-gray-500 uppercase">College / Institution</label>
+                            <input type="text" name="college" required placeholder="Your College Name" 
+                                class="w-full p-4 bg-gray-50 border border-gray-200 rounded outline-none input-focus transition">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-army-olive font-bold border-b pb-2 uppercase text-sm tracking-widest">Event Selection</h3>
+                    <div class="p-4 bg-gray-50 rounded border border-dashed border-gray-300">
+                        <label class="text-xs font-bold text-gray-500 uppercase mb-3 block">List the events you want to join:</label>
+                        <input type="text" name="events" placeholder="e.g. Drill, Best Cadet, Firing" 
+                            class="w-full p-4 bg-white border border-gray-200 rounded outline-none input-focus transition">
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn" class="w-full army-btn text-white font-bold py-5 rounded uppercase tracking-widest text-lg shadow-lg">
+                    Confirm Registration
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-[#1a1d0e] text-white py-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <h3 class="text-xl font-bold">[COLLEGE NAME] NCC UNIT</h3>
+            <p class="text-gray-400 text-sm italic">"Unity and Discipline"</p>
+            <div class="flex justify-center space-x-6 pt-4">
+                <a href="#" class="hover:text-yellow-500"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-yellow-500"><i class="fab fa-facebook text-2xl"></i></a>
+            </div>
+            <p class="text-xs text-gray-500 mt-8">&copy; 2026 Designed for NCC Cadets.</p>
+        </div>
+    </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwQimxmYdzd0HcKsU0nM4nHkHRYhtV0bDr50Etr9KhtbRBe_VTOSn2sco71A_SFTZMP/exec' // Put your URL here
+        const form = document.getElementById('registrationForm')
+        const btn = document.getElementById('submitBtn')
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          btn.disabled = true
+          btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+          
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                alert("Jai Hind! Registration Successful.");
+                btn.disabled = false;
+                btn.innerHTML = "Confirm Registration";
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert("Something went wrong. Please try again.");
+                btn.disabled = false;
+                btn.innerHTML = "Confirm Registration";
+            })
+        })
+    </script>
+</body>
+</html>
